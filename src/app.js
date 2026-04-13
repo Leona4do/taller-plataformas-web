@@ -9,7 +9,7 @@ const PORT = process.env.PORT || 3000;
 app.use(express.json());
 
 app.get("/", (req, res) => {
-  res.send("API de autenticación funcionando correctamente");
+  res.send("API funcionando correctamente");
 });
 
 app.use("/api/auth", authRoutes);
