@@ -1,7 +1,7 @@
 require("dotenv").config();
 
 const express = require("express");
-const authRoutes = require("./routes/authRoutes");
+const privadoRoutes = require("./routes/privado");
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -9,10 +9,10 @@ const PORT = process.env.PORT || 3000;
 app.use(express.json());
 
 app.get("/", (req, res) => {
-  res.send("API de autenticación funcionando correctamente");
+  res.send("API funcionando correctamente");
 });
 
-app.use("/api/auth", authRoutes);
+app.use("/api/privado", privadoRoutes);
 
 app.listen(PORT, () => {
   console.log(`Servidor corriendo en http://localhost:${PORT}` );
